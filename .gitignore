@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.matplotlib-cache/
+.ipynb_checkpoints/
+supervised_learning/campaign_response_propensity/data/raw/*_full.csv
+supervised_learning/campaign_response_propensity/data/processed/*.csv
+!supervised_learning/campaign_response_propensity/data/processed/.gitkeep

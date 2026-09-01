@@ -1,0 +1,79 @@
+{
+  "selected_model": "hist_gradient_boosting",
+  "quality_report": {
+    "rows": 72060,
+    "duplicate_customer_scoring_date": 60,
+    "negative_recency": 15,
+    "invalid_tenure": 15,
+    "missing_model_values": 4322,
+    "ineligible_consent_rows": 0,
+    "suppressed_rows": 0,
+    "leakage_columns_present": 4
+  },
+  "rows": {
+    "clean": 71970,
+    "train": 47983,
+    "validation": 11994,
+    "test": 11993
+  },
+  "cohorts": {
+    "train": [
+      "2025-09-01",
+      "2025-10-01",
+      "2025-11-01",
+      "2025-12-01",
+      "2026-01-01",
+      "2026-02-01",
+      "2026-03-01",
+      "2026-04-01"
+    ],
+    "validation": [
+      "2026-05-01",
+      "2026-06-01"
+    ],
+    "test": [
+      "2026-07-01",
+      "2026-08-01"
+    ]
+  },
+  "test_metrics": {
+    "roc_auc": 0.710759693303522,
+    "pr_auc": 0.22008268061816993,
+    "brier": 0.06933313125145256,
+    "log_loss": 0.25661446890610945,
+    "precision_at_capacity": 0.18299291371404752,
+    "recall_at_capacity": 0.45681581685744016,
+    "lift_at_capacity": 2.2836982457570985,
+    "captured_responders": 439,
+    "capacity": 2399,
+    "population": 11993,
+    "response_rate": 0.08013007587759527
+  },
+  "rule_test_metrics": {
+    "roc_auc": 0.6719176226721771,
+    "pr_auc": 0.18270183684528352,
+    "brier": null,
+    "log_loss": null,
+    "precision_at_capacity": 0.16340141725719048,
+    "recall_at_capacity": 0.40790842872008326,
+    "lift_at_capacity": 2.0392020782159057,
+    "captured_responders": 392,
+    "capacity": 2399,
+    "population": 11993,
+    "response_rate": 0.08013007587759527
+  },
+  "champion_value": {
+    "capacity": 2399,
+    "gross_margin_usd": 15413.544955,
+    "offer_cost_usd": 3056.1736,
+    "contact_cost_usd": 839.65,
+    "net_value_usd": 11517.721355
+  },
+  "rule_value": {
+    "capacity": 2399,
+    "gross_margin_usd": 13230.81084,
+    "offer_cost_usd": 2581.8528,
+    "contact_cost_usd": 839.65,
+    "net_value_usd": 9809.30804
+  }
+}
