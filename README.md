@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/repository-banner.png" alt="Machine Learning Standard Framework banner" width="100%">
+</p>
+
 # Machine Learning Standard Framework
 
 [![Repository quality](https://github.com/laura-rivera-sancho/machine-learning-standard-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/laura-rivera-sancho/machine-learning-standard-framework/actions/workflows/ci.yml)
