@@ -1,4 +1,4 @@
-# ML1 — PayWave Inactivity
+# PayWave — Inactivity Risk Prioritization
 
 ## Decision
 
