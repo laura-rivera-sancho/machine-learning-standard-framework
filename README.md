@@ -8,23 +8,21 @@ This repository demonstrates how I move from a business decision to a defensible
 
 All companies, customer records, and results are fictional or synthetically generated. No employer, client, or confidential data are used.
 
-## Portfolio review path
+## Explore the Machine Learning portfolio
 
-| What to assess | Start here | Evidence |
+Use these shortcuts to explore the decisions, methods, and stakeholder-ready
+evidence across the portfolio:
+
+| What to assess | Start here | What it demonstrates |
 |---|---|---|
-| Business and model decision | [ML1 stakeholder readout](supervised_learning/campaign_response_propensity/reports/stakeholder_readout.md) | Capacity-aware recommendation, economics, limits, and pilot design |
-| Supervised executive presentation | [ML1 PowerPoint](supervised_learning/campaign_response_propensity/reports/stakeholder_readout.pptx) | Five-slide decision narrative for non-technical stakeholders |
-| Model evaluation | [ML1 expected results](supervised_learning/campaign_response_propensity/case_study/expected_results.md) | Temporal validation, baseline comparison, calibration, segments, and drivers |
-| Technical implementation | [ML1 source](supervised_learning/campaign_response_propensity/src) | Deterministic data, data controls, model comparison, and reusable evaluation |
-| Core concepts | [Campaign-response fundamentals](supervised_learning/campaign_response_propensity/campaign_response_fundamentals.md) | Leakage, temporal validation, ranking, calibration, propensity vs. uplift, and monitoring |
-| Responsible operation | [ML1 model card](supervised_learning/campaign_response_propensity/model_card/model_card.md) | Intended use, exclusions, risks, controls, and monitoring thresholds |
-| Supervised transfer case | [PayWave executive PowerPoint](supervised_learning/paywave_inactivity/reports/stakeholder_readout.pptx) | Inactivity-risk prioritization, capacity evidence, limitations, and pilot plan |
-| Unsupervised decision case | [ML2 stakeholder readout](unsupervised_learning/customer_segmentation/reports/stakeholder_readout.md) | Stable customer groups, activation hypotheses, limitations, and test gates |
-| Unsupervised executive presentation | [ML2 PowerPoint](unsupervised_learning/customer_segmentation/reports/stakeholder_readout.pptx) | Five-slide model-selection and activation narrative |
-| Segmentation evaluation | [ML2 expected results](unsupervised_learning/customer_segmentation/case_study/expected_results.md) | Candidate comparison, coverage, minimum size, resampling, and temporal stability |
-| Segmentation concepts | [Customer-segmentation fundamentals](unsupervised_learning/customer_segmentation/customer_segmentation_fundamentals.md) | Algorithms, metrics, interpretation, stability, and causal boundaries |
-| Portfolio sequence | [Roadmap](ROADMAP.md) | Supervised, transfer, unsupervised, and production-readiness milestones |
-
+| Campaign-response modeling | [Campaign Response Propensity case](supervised_learning/campaign_response_propensity/README.md) | Target definition, leakage prevention, temporal validation, calibration, capacity-aware ranking, and pilot design |
+| Inactivity-risk modeling | [PayWave Inactivity case](supervised_learning/paywave_inactivity/README.md) | A second supervised decision with baseline comparison, capacity evidence, model governance, and an executive readout |
+| Customer segmentation | [Customer Segmentation case](unsupervised_learning/customer_segmentation/README.md) | Unsupervised candidate comparison, stability testing, interpretable personas, and activation guidance |
+| Executive communication | [Campaign-response PowerPoint](supervised_learning/campaign_response_propensity/reports/stakeholder_readout.pptx) and [segmentation PowerPoint](unsupervised_learning/customer_segmentation/reports/stakeholder_readout.pptx) | Clear model results, limitations, recommendations, and next actions for non-technical stakeholders |
+| Responsible model operation | [Campaign-response model card](supervised_learning/campaign_response_propensity/model_card/model_card.md) and [PayWave monitoring plan](supervised_learning/paywave_inactivity/case_study/monitoring_plan.md) | Intended use, exclusions, controls, monitoring thresholds, retraining signals, and rollback boundaries |
+| Machine Learning concepts | [Campaign-response fundamentals](supervised_learning/campaign_response_propensity/campaign_response_fundamentals.md) and [segmentation fundamentals](unsupervised_learning/customer_segmentation/customer_segmentation_fundamentals.md) | Supervised and unsupervised concepts, evaluation choices, interpretation, and common failure modes |
+| Reproducible implementation | [Campaign-response source](supervised_learning/campaign_response_propensity/src), [segmentation source](unsupervised_learning/customer_segmentation/src), and [automated tests](tests) | Deterministic data, reusable workflows, analytical controls, and repository quality checks |
+| Portfolio scope and milestones | [Roadmap](ROADMAP.md) | Completed cases, production-readiness goals, completion criteria, and delivery sequence |
 
 ## Repository map
 
@@ -37,7 +35,7 @@ machine-learning-standard-framework/
 │   │   ├── model_card/       # Intended use, limitations, risks, controls
 │   │   ├── reports/          # Stakeholder readout and executive visual
 │   │   └── src/              # Generator, training, evaluation, and visualization
-│   └── paywave_inactivity/   # Supervised transfer case and executive readout
+│   └── paywave_inactivity/   # Inactivity-risk case and executive readout
 ├── unsupervised_learning/
 │   └── customer_segmentation/
 │       ├── case_study/       # Decision contract, dictionary, results, monitoring
