@@ -25,34 +25,6 @@ All companies, customer records, and results are fictional or synthetically gene
 | Segmentation concepts | [Customer-segmentation fundamentals](unsupervised_learning/customer_segmentation/customer_segmentation_fundamentals.md) | Algorithms, metrics, interpretation, stability, and causal boundaries |
 | Portfolio sequence | [Roadmap](ROADMAP.md) | Supervised, transfer, unsupervised, and production-readiness milestones |
 
-![ML1 executive summary comparing the selected model with the current targeting rule](supervised_learning/campaign_response_propensity/reports/ml1_executive_summary.png)
-
-![ML2 executive summary showing customer segments, candidate stability, behavioral profiles, and activation tests](unsupervised_learning/customer_segmentation/reports/ml2_executive_summary.png)
-
-## Completed case studies
-
-### ML1 — Campaign Response Propensity
-
-Harbor & Pine has limited campaign capacity and needs to rank consented customers by their probability of responding within 14 days. The case compares Logistic Regression, a simple Decision Tree, HistGradientBoosting, and a transparent targeting rule using chronological Train, Validation, and Test cohorts.
-
-On the July–August 2026 synthetic holdout, the selected HistGradientBoosting model:
-
-- identifies **439 responders** in a **2,399-customer** contact capacity, versus **392** for the rule
-- reaches **18.30% precision**, **45.68% recall**, and **2.28x lift** at capacity
-- produces **$11,517.72** in illustrative net value, versus **$9,809.31** for the rule
-- excludes post-campaign outcomes and protected personal characteristics from model inputs
-
-The recommendation is a controlled shadow-mode and randomized pilot—not immediate automated rollout. Propensity predicts who is likely to respond; it does not estimate who responds because of treatment.
-
-### ML2 — Customer Segmentation
-
-Northstar Market needs stable behavioral groups to design differentiated lifecycle experiments beyond fixed RFM rules. The case compares K-means, Gaussian Mixture Models, and DBSCAN while treating separation, stability, coverage, minimum size, and actionability as joint requirements.
-
-The selected four-cluster K-means solution segments 5,966 synthetic customers with 100% coverage, 0.846 bootstrap ARI, 0.717 temporal assignment ARI, and an 18.1% minimum segment share. It yields Champions, At Risk, Digital Growth, and Deal Seekers personas. These are planning hypotheses; randomized tests remain necessary before treatment decisions.
-
-### ML1 Transfer — PayWave Inactivity
-
-The migrated PayWave case tests the supervised framework in a second decision: which 5,000 customers should receive retention outreach? On the held-out synthetic cohort, Gradient Boosting captures 3,853 future-inactive customers—552 more than the recency rule—with 77.06% precision and 2.58x lift. Its existing five-slide executive deck, source workflow, evidence, model card, and monitoring plan now live in this repository.
 
 ## Repository map
 
@@ -78,7 +50,6 @@ machine-learning-standard-framework/
 └── README.md
 ```
 
-No challenge notebooks are included. The reference workflow is implemented as tested source code so evaluation logic is reusable and reviewable.
 
 ## Reproduce the case studies
 
