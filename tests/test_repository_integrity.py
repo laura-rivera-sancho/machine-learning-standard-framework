@@ -57,6 +57,18 @@ def test_required_portfolio_files_exist():
         "unsupervised_learning/customer_segmentation/reports/stakeholder_readout.md",
         "unsupervised_learning/customer_segmentation/model_card/model_card.md",
         "unsupervised_learning/customer_segmentation/reports/stakeholder_readout.pptx",
+        "production_readiness/README.md",
+        "production_readiness/production_readiness_fundamentals.md",
+        "production_readiness/operating_model.md",
+        "production_readiness/contracts/model_release_contract.md",
+        "production_readiness/contracts/example_release_manifest.json",
+        "production_readiness/monitoring/monitoring_and_alerting.md",
+        "production_readiness/operations/retraining_and_rollback.md",
+        "production_readiness/operations/incident_runbook.md",
+        "production_readiness/templates/model_release_checklist.md",
+        "production_readiness/reports/stakeholder_readout.md",
+        "production_readiness/reports/stakeholder_readout.pptx",
+        "production_readiness/src/validate_release_manifest.py",
     ]
     missing = [path for path in required if not (ROOT / path).exists()]
     assert not missing, f"Missing portfolio files: {missing}"
@@ -67,5 +79,6 @@ def test_completed_ml_modules_publish_valid_powerpoint_readouts():
         ROOT / "supervised_learning/campaign_response_propensity/reports/stakeholder_readout.pptx",
         ROOT / "supervised_learning/paywave_inactivity/reports/stakeholder_readout.pptx",
         ROOT / "unsupervised_learning/customer_segmentation/reports/stakeholder_readout.pptx",
+        ROOT / "production_readiness/reports/stakeholder_readout.pptx",
     ]
     assert all(deck.read_bytes().startswith(b"PK") for deck in decks)

@@ -22,6 +22,7 @@ evidence across the portfolio:
 | Responsible model operation | [Campaign-response model card](supervised_learning/campaign_response_propensity/model_card/model_card.md) and [PayWave monitoring plan](supervised_learning/paywave_inactivity/case_study/monitoring_plan.md) | Intended use, exclusions, controls, monitoring thresholds, retraining signals, and rollback boundaries |
 | Machine Learning concepts | [Campaign-response fundamentals](supervised_learning/campaign_response_propensity/campaign_response_fundamentals.md) and [segmentation fundamentals](unsupervised_learning/customer_segmentation/customer_segmentation_fundamentals.md) | Supervised and unsupervised concepts, evaluation choices, interpretation, and common failure modes |
 | Reproducible implementation | [Campaign-response source](supervised_learning/campaign_response_propensity/src), [segmentation source](unsupervised_learning/customer_segmentation/src), and [automated tests](tests) | Deterministic data, reusable workflows, analytical controls, and repository quality checks |
+| Production readiness | [ML3 operating framework](production_readiness/README.md) | Release contracts, registry lineage, monitoring, retraining, rollback, incident response, and approval controls |
 | Portfolio scope and milestones | [Roadmap](ROADMAP.md) | Completed cases, production-readiness goals, completion criteria, and delivery sequence |
 
 ## Repository map
@@ -43,6 +44,7 @@ machine-learning-standard-framework/
 │       ├── model_card/       # Intended use, limitations, risks, controls
 │       ├── reports/          # Stakeholder readout and executive visual
 │       └── src/              # Generator, candidate comparison, and visualization
+├── production_readiness/     # Shared release, monitoring, retraining, and rollback controls
 ├── tests/                    # Model logic and repository integrity
 ├── ROADMAP.md
 └── README.md
@@ -68,6 +70,7 @@ python supervised_learning/paywave_inactivity/src/train_evaluate_models.py
 python unsupervised_learning/customer_segmentation/src/generate_synthetic_data.py
 python unsupervised_learning/customer_segmentation/src/segment_evaluate.py
 python unsupervised_learning/customer_segmentation/src/create_visuals.py
+python production_readiness/src/validate_release_manifest.py production_readiness/contracts/example_release_manifest.json
 pytest
 ```
 

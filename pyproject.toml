@@ -14,4 +14,5 @@ source = [
     "supervised_learning/campaign_response_propensity/src",
     "supervised_learning/paywave_inactivity/src",
     "unsupervised_learning/customer_segmentation/src",
+    "production_readiness/src",
 ]

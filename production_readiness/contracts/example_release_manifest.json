@@ -1,0 +1,72 @@
+{
+  "contract_version": "1.0",
+  "model": {
+    "id": "campaign-response",
+    "version": "1.0.0",
+    "task_type": "supervised_binary",
+    "lifecycle_state": "approved",
+    "artifact_checksum": "sha256:portfolio-example-not-a-deployable-artifact"
+  },
+  "provenance": {
+    "source_revision": "portfolio-reference",
+    "training_data_reference": "synthetic-monthly-customer-snapshot-v1",
+    "training_cutoff": "2026-04-30",
+    "environment_reference": "requirements.txt"
+  },
+  "decision": {
+    "name": "capacity-constrained retention prioritization",
+    "intended_use": "Rank consented, eligible customers for a controlled retention pilot.",
+    "prohibited_use": "Do not autonomously contact customers or interpret propensity as incremental treatment effect.",
+    "business_owner": "Retention Strategy Lead",
+    "model_owner": "Applied ML Lead"
+  },
+  "evaluation": {
+    "window": "2026-07-01/2026-08-31",
+    "primary_metric": "lift_at_capacity",
+    "observed_value": 2.28,
+    "release_threshold": 1.8,
+    "baseline_value": 2.04,
+    "capacity_fraction": 0.2
+  },
+  "serving": {
+    "mode": "batch",
+    "rollout": "shadow",
+    "maximum_score_age_hours": 168,
+    "output_contract": [
+      "entity_id",
+      "model_id",
+      "model_version",
+      "scored_at",
+      "prediction",
+      "decision_context",
+      "reason_codes",
+      "valid_until"
+    ]
+  },
+  "monitoring": {
+    "review_cadence": "weekly",
+    "warning_signals": [
+      "population_stability_index >= 0.10",
+      "calibration_error > 0.05",
+      "selection_volume deviates by more than 10 percent"
+    ],
+    "rollback_triggers": [
+      "consent or suppression controls unavailable",
+      "incompatible input schema",
+      "lift_at_capacity < 1.20 for two mature cohorts"
+    ],
+    "operations_owner": "Marketing Analytics Operations"
+  },
+  "rollback": {
+    "fallback": "approved recency-engagement business rule",
+    "maximum_recovery_minutes": 60,
+    "owner": "Retention Strategy Lead",
+    "rehearsal_status": "passed"
+  },
+  "approvals": {
+    "technical_approver": "Independent Model Reviewer",
+    "business_approver": "Retention Strategy Lead",
+    "approved_on": "2026-09-02"
+  }
+}
+
