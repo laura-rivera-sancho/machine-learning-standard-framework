@@ -1,5 +1,7 @@
 # Stakeholder Readout — ML2 Customer Segmentation
 
+[Download the five-slide executive PowerPoint](stakeholder_readout.pptx) for a non-technical presentation of the recommendation, model choice, personas, limitations, and activation plan.
+
 ## Recommendation
 
 Adopt the four-segment K-means solution as a **planning and experimentation framework**, beginning with controlled tests. Do not use segment membership as an automatic treatment rule.

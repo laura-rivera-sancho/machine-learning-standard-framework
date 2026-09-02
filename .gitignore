@@ -10,6 +10,12 @@ htmlcov/
 supervised_learning/campaign_response_propensity/data/raw/*_full.csv
 supervised_learning/campaign_response_propensity/data/processed/*.csv
 !supervised_learning/campaign_response_propensity/data/processed/.gitkeep
+supervised_learning/paywave_inactivity/data/raw/paywave_inactivity_full.csv
+supervised_learning/paywave_inactivity/data/processed/*.csv
+!supervised_learning/paywave_inactivity/data/processed/.gitkeep
 unsupervised_learning/customer_segmentation/data/raw/customer_snapshots.csv
 unsupervised_learning/customer_segmentation/data/processed/*.csv
 !unsupervised_learning/customer_segmentation/data/processed/.gitkeep
+.deck-build/
+**/reports/stakeholder_readout/
+**/*.pptx.inspect.ndjson

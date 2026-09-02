@@ -1,5 +1,7 @@
 # ML1 Stakeholder Readout — Campaign Response Propensity
 
+[Download the five-slide executive PowerPoint](stakeholder_readout.pptx) for a non-technical presentation of the decision, evidence, limitations, and pilot plan.
+
 ## Decision
 
 Advance the selected model to shadow scoring and a randomized pilot. Do not use it for autonomous campaign execution or claim incremental lift from the retrospective propensity results.

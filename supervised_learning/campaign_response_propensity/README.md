@@ -13,6 +13,7 @@ The model estimates the probability of response within 14 days after a standardi
 | Resource | Purpose |
 |---|---|
 | [Stakeholder readout](reports/stakeholder_readout.md) | Decision, results, limitations, and pilot recommendation |
+| [Executive PowerPoint](reports/stakeholder_readout.pptx) | Five-slide, non-technical decision narrative for stakeholder presentation |
 | [Executive visual](reports/ml1_executive_summary.png) | Baseline comparison, calibration, drivers, and economics |
 | [Fundamentals](campaign_response_fundamentals.md) | Key supervised-learning concepts and interpretation guidance |
 | [Methodology](methodology.md) | Reusable source-to-decision modeling lifecycle |

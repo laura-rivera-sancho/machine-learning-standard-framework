@@ -20,13 +20,14 @@ The four interpretable groups are Champions, At Risk, Digital Growth, and Deal S
 ## Review path
 
 1. [Stakeholder readout](reports/stakeholder_readout.md)
-2. [Business case](case_study/business_case.md)
-3. [Expected results](case_study/expected_results.md)
-4. [Segmentation fundamentals](customer_segmentation_fundamentals.md)
-5. [Methodology](methodology.md)
-6. [Model card](model_card/model_card.md)
-7. [Monitoring plan](case_study/monitoring_plan.md)
-8. [Source implementation](src)
+2. [Five-slide executive PowerPoint](reports/stakeholder_readout.pptx)
+3. [Business case](case_study/business_case.md)
+4. [Expected results](case_study/expected_results.md)
+5. [Segmentation fundamentals](customer_segmentation_fundamentals.md)
+6. [Methodology](methodology.md)
+7. [Model card](model_card/model_card.md)
+8. [Monitoring plan](case_study/monitoring_plan.md)
+9. [Source implementation](src)
 
 ## Reproduce
 

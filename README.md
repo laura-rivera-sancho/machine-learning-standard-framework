@@ -13,11 +13,14 @@ All companies, customer records, and results are fictional or synthetically gene
 | What to assess | Start here | Evidence |
 |---|---|---|
 | Business and model decision | [ML1 stakeholder readout](supervised_learning/campaign_response_propensity/reports/stakeholder_readout.md) | Capacity-aware recommendation, economics, limits, and pilot design |
+| Supervised executive presentation | [ML1 PowerPoint](supervised_learning/campaign_response_propensity/reports/stakeholder_readout.pptx) | Five-slide decision narrative for non-technical stakeholders |
 | Model evaluation | [ML1 expected results](supervised_learning/campaign_response_propensity/case_study/expected_results.md) | Temporal validation, baseline comparison, calibration, segments, and drivers |
 | Technical implementation | [ML1 source](supervised_learning/campaign_response_propensity/src) | Deterministic data, data controls, model comparison, and reusable evaluation |
 | Core concepts | [Campaign-response fundamentals](supervised_learning/campaign_response_propensity/campaign_response_fundamentals.md) | Leakage, temporal validation, ranking, calibration, propensity vs. uplift, and monitoring |
 | Responsible operation | [ML1 model card](supervised_learning/campaign_response_propensity/model_card/model_card.md) | Intended use, exclusions, risks, controls, and monitoring thresholds |
+| Supervised transfer case | [PayWave executive PowerPoint](supervised_learning/paywave_inactivity/reports/stakeholder_readout.pptx) | Inactivity-risk prioritization, capacity evidence, limitations, and pilot plan |
 | Unsupervised decision case | [ML2 stakeholder readout](unsupervised_learning/customer_segmentation/reports/stakeholder_readout.md) | Stable customer groups, activation hypotheses, limitations, and test gates |
+| Unsupervised executive presentation | [ML2 PowerPoint](unsupervised_learning/customer_segmentation/reports/stakeholder_readout.pptx) | Five-slide model-selection and activation narrative |
 | Segmentation evaluation | [ML2 expected results](unsupervised_learning/customer_segmentation/case_study/expected_results.md) | Candidate comparison, coverage, minimum size, resampling, and temporal stability |
 | Segmentation concepts | [Customer-segmentation fundamentals](unsupervised_learning/customer_segmentation/customer_segmentation_fundamentals.md) | Algorithms, metrics, interpretation, stability, and causal boundaries |
 | Portfolio sequence | [Roadmap](ROADMAP.md) | Supervised, transfer, unsupervised, and production-readiness milestones |
@@ -47,17 +50,22 @@ Northstar Market needs stable behavioral groups to design differentiated lifecyc
 
 The selected four-cluster K-means solution segments 5,966 synthetic customers with 100% coverage, 0.846 bootstrap ARI, 0.717 temporal assignment ARI, and an 18.1% minimum segment share. It yields Champions, At Risk, Digital Growth, and Deal Seekers personas. These are planning hypotheses; randomized tests remain necessary before treatment decisions.
 
+### ML1 Transfer — PayWave Inactivity
+
+The migrated PayWave case tests the supervised framework in a second decision: which 5,000 customers should receive retention outreach? On the held-out synthetic cohort, Gradient Boosting captures 3,853 future-inactive customers—552 more than the recency rule—with 77.06% precision and 2.58x lift. Its existing five-slide executive deck, source workflow, evidence, model card, and monitoring plan now live in this repository.
+
 ## Repository map
 
 ```text
 machine-learning-standard-framework/
 ├── supervised_learning/
-│   └── campaign_response_propensity/
-│       ├── case_study/       # Decision contract, dictionary, results, monitoring
-│       ├── data/             # Review sample and generated outputs
-│       ├── model_card/       # Intended use, limitations, risks, controls
-│       ├── reports/          # Stakeholder readout and executive visual
-│       └── src/              # Generator, training, evaluation, and visualization
+│   ├── campaign_response_propensity/
+│   │   ├── case_study/       # Decision contract, dictionary, results, monitoring
+│   │   ├── data/             # Review sample and generated outputs
+│   │   ├── model_card/       # Intended use, limitations, risks, controls
+│   │   ├── reports/          # Stakeholder readout and executive visual
+│   │   └── src/              # Generator, training, evaluation, and visualization
+│   └── paywave_inactivity/   # Supervised transfer case and executive readout
 ├── unsupervised_learning/
 │   └── customer_segmentation/
 │       ├── case_study/       # Decision contract, dictionary, results, monitoring
@@ -84,6 +92,9 @@ pip install -r requirements-dev.txt
 python supervised_learning/campaign_response_propensity/src/generate_synthetic_data.py
 python supervised_learning/campaign_response_propensity/src/train_evaluate.py
 python supervised_learning/campaign_response_propensity/src/create_visuals.py
+
+python supervised_learning/paywave_inactivity/src/generate_synthetic_data.py
+python supervised_learning/paywave_inactivity/src/train_evaluate_models.py
 
 python unsupervised_learning/customer_segmentation/src/generate_synthetic_data.py
 python unsupervised_learning/customer_segmentation/src/segment_evaluate.py

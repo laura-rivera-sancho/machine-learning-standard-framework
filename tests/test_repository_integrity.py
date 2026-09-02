@@ -37,6 +37,16 @@ def test_required_portfolio_files_exist():
         "supervised_learning/campaign_response_propensity/case_study/data_dictionary.md",
         "supervised_learning/campaign_response_propensity/reports/stakeholder_readout.md",
         "supervised_learning/campaign_response_propensity/model_card/model_card.md",
+        "supervised_learning/campaign_response_propensity/reports/stakeholder_readout.pptx",
+        "supervised_learning/paywave_inactivity/README.md",
+        "supervised_learning/paywave_inactivity/paywave_inactivity_fundamentals.md",
+        "supervised_learning/paywave_inactivity/methodology.md",
+        "supervised_learning/paywave_inactivity/case_study/business_case.md",
+        "supervised_learning/paywave_inactivity/case_study/data_dictionary.md",
+        "supervised_learning/paywave_inactivity/case_study/expected_results.md",
+        "supervised_learning/paywave_inactivity/case_study/monitoring_plan.md",
+        "supervised_learning/paywave_inactivity/model_card/model_card.md",
+        "supervised_learning/paywave_inactivity/reports/stakeholder_readout.pptx",
         "unsupervised_learning/customer_segmentation/README.md",
         "unsupervised_learning/customer_segmentation/customer_segmentation_fundamentals.md",
         "unsupervised_learning/customer_segmentation/methodology.md",
@@ -46,6 +56,16 @@ def test_required_portfolio_files_exist():
         "unsupervised_learning/customer_segmentation/case_study/monitoring_plan.md",
         "unsupervised_learning/customer_segmentation/reports/stakeholder_readout.md",
         "unsupervised_learning/customer_segmentation/model_card/model_card.md",
+        "unsupervised_learning/customer_segmentation/reports/stakeholder_readout.pptx",
     ]
     missing = [path for path in required if not (ROOT / path).exists()]
     assert not missing, f"Missing portfolio files: {missing}"
+
+
+def test_completed_ml_modules_publish_valid_powerpoint_readouts():
+    decks = [
+        ROOT / "supervised_learning/campaign_response_propensity/reports/stakeholder_readout.pptx",
+        ROOT / "supervised_learning/paywave_inactivity/reports/stakeholder_readout.pptx",
+        ROOT / "unsupervised_learning/customer_segmentation/reports/stakeholder_readout.pptx",
+    ]
+    assert all(deck.read_bytes().startswith(b"PK") for deck in decks)
