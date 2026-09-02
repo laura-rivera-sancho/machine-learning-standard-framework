@@ -10,4 +10,7 @@ testpaths = ["tests"]
 addopts = "--strict-markers"
 
 [tool.coverage.run]
-source = ["supervised_learning/campaign_response_propensity/src"]
+source = [
+    "supervised_learning/campaign_response_propensity/src",
+    "unsupervised_learning/customer_segmentation/src",
+]

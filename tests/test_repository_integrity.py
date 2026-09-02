@@ -19,7 +19,7 @@ def test_relative_markdown_links_resolve():
     assert not broken, "Broken Markdown links:\n" + "\n".join(broken)
 
 
-def test_ml1_has_no_challenge_notebook():
+def test_repository_has_no_challenge_notebook():
     names = [path.name.lower() for path in ROOT.rglob("*.ipynb")]
     assert not any("challenge" in name for name in names)
 
@@ -37,6 +37,15 @@ def test_required_portfolio_files_exist():
         "supervised_learning/campaign_response_propensity/case_study/data_dictionary.md",
         "supervised_learning/campaign_response_propensity/reports/stakeholder_readout.md",
         "supervised_learning/campaign_response_propensity/model_card/model_card.md",
+        "unsupervised_learning/customer_segmentation/README.md",
+        "unsupervised_learning/customer_segmentation/customer_segmentation_fundamentals.md",
+        "unsupervised_learning/customer_segmentation/methodology.md",
+        "unsupervised_learning/customer_segmentation/case_study/business_case.md",
+        "unsupervised_learning/customer_segmentation/case_study/data_dictionary.md",
+        "unsupervised_learning/customer_segmentation/case_study/expected_results.md",
+        "unsupervised_learning/customer_segmentation/case_study/monitoring_plan.md",
+        "unsupervised_learning/customer_segmentation/reports/stakeholder_readout.md",
+        "unsupervised_learning/customer_segmentation/model_card/model_card.md",
     ]
     missing = [path for path in required if not (ROOT / path).exists()]
     assert not missing, f"Missing portfolio files: {missing}"

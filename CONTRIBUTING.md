@@ -23,7 +23,7 @@ Do not add challenge notebooks. Add a guided notebook only when it materially im
 ```bash
 ruff check .
 ruff format --check .
-python -m compileall -q supervised_learning tests
+python -m compileall -q supervised_learning unsupervised_learning tests
 pytest --cov
 ```
 

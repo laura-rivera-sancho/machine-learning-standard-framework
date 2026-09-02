@@ -1,0 +1,185 @@
+{
+  "selected_model": "kmeans_4",
+  "selected_metrics": {
+    "clusters": 4.0,
+    "silhouette": 0.24531075602916028,
+    "calinski_harabasz": 2013.8841137440618,
+    "davies_bouldin": 1.4838590175572162,
+    "stability_ari": 0.8455986629369241,
+    "coverage": 1.0,
+    "smallest_segment_share": 0.1806905799530674
+  },
+  "temporal_assignment_ari": 0.7167483711920907,
+  "synthetic_truth_ari_diagnostic": 0.6133893057655729,
+  "customers_segmented": 5966,
+  "segment_profiles": [
+    {
+      "cluster_id": 2,
+      "segment": "Champions",
+      "recency_days": 18.910123966942148,
+      "frequency_12m": 14.25309917355372,
+      "monetary_12m": 1888.9676,
+      "avg_order_value": 128.59005165289256,
+      "discount_order_share": 0.15159127066115702,
+      "email_engagement_rate": 0.5938910640495868,
+      "digital_order_share": 0.6397380681818181,
+      "return_rate": 0.04550108471074381,
+      "tenure_days": 1383.5139462809918,
+      "customers": 1936,
+      "customer_share": 0.3245055313442843
+    },
+    {
+      "cluster_id": 0,
+      "segment": "At Risk",
+      "recency_days": 171.83136278780336,
+      "frequency_12m": 2.655258245177349,
+      "monetary_12m": 223.21216656230433,
+      "avg_order_value": 76.53563783447417,
+      "discount_order_share": 0.31168886123210954,
+      "email_engagement_rate": 0.16095444928438082,
+      "digital_order_share": 0.3986126944617299,
+      "return_rate": 0.07146496577473553,
+      "tenure_days": 1095.0970752955818,
+      "customers": 1607,
+      "customer_share": 0.2693597049949715
+    },
+    {
+      "cluster_id": 1,
+      "segment": "Digital Growth",
+      "recency_days": 50.09144981412639,
+      "frequency_12m": 7.201486988847583,
+      "monetary_12m": 597.1931492537313,
+      "avg_order_value": 83.25278810408922,
+      "discount_order_share": 0.23282646840148696,
+      "email_engagement_rate": 0.39192475836431223,
+      "digital_order_share": 0.7878672862453531,
+      "return_rate": 0.07060133828996282,
+      "tenure_days": 541.3457249070632,
+      "customers": 1345,
+      "customer_share": 0.22544418370767683
+    },
+    {
+      "cluster_id": 3,
+      "segment": "Deal Seekers",
+      "recency_days": 35.50834879406308,
+      "frequency_12m": 10.7430426716141,
+      "monetary_12m": 699.4730232558139,
+      "avg_order_value": 64.40316326530612,
+      "discount_order_share": 0.5852232838589982,
+      "email_engagement_rate": 0.4752497217068646,
+      "digital_order_share": 0.6911701298701299,
+      "return_rate": 0.09031762523191095,
+      "tenure_days": 747.1289424860853,
+      "customers": 1078,
+      "customer_share": 0.1806905799530674
+    }
+  ],
+  "candidate_comparison": [
+    {
+      "model": "kmeans_4",
+      "clusters": 4,
+      "silhouette": 0.24531075602916028,
+      "calinski_harabasz": 2013.8841137440618,
+      "davies_bouldin": 1.4838590175572162,
+      "stability_ari": 0.8455986629369241,
+      "coverage": 1.0,
+      "smallest_segment_share": 0.1806905799530674
+    },
+    {
+      "model": "gaussian_mixture_4",
+      "clusters": 4,
+      "silhouette": 0.25799508590883613,
+      "calinski_harabasz": 1862.333527745494,
+      "davies_bouldin": 1.3235655227362721,
+      "stability_ari": 0.8113739258553927,
+      "coverage": 1.0,
+      "smallest_segment_share": 0.029165269862554476
+    },
+    {
+      "model": "kmeans_5",
+      "clusters": 5,
+      "silhouette": 0.23949869895280376,
+      "calinski_harabasz": 1875.8725178036857,
+      "davies_bouldin": 1.4909658405628021,
+      "stability_ari": 0.9666023724422216,
+      "coverage": 1.0,
+      "smallest_segment_share": 0.12068387529332886
+    },
+    {
+      "model": "gaussian_mixture_5",
+      "clusters": 5,
+      "silhouette": 0.2475878787468369,
+      "calinski_harabasz": 1753.7912384496074,
+      "davies_bouldin": 1.37168045762214,
+      "stability_ari": 0.9461491480456855,
+      "coverage": 1.0,
+      "smallest_segment_share": 0.029165269862554476
+    },
+    {
+      "model": "kmeans_6",
+      "clusters": 6,
+      "silhouette": 0.20309123653711347,
+      "calinski_harabasz": 1704.1686775954831,
+      "davies_bouldin": 1.605438629283485,
+      "stability_ari": 0.9652718228109209,
+      "coverage": 1.0,
+      "smallest_segment_share": 0.1139792155548106
+    },
+    {
+      "model": "gaussian_mixture_6",
+      "clusters": 6,
+      "silhouette": 0.19846389150149019,
+      "calinski_harabasz": 1568.7757832202194,
+      "davies_bouldin": 1.4859064408596814,
+      "stability_ari": 0.7724172192361407,
+      "coverage": 1.0,
+      "smallest_segment_share": 0.02950050284948039
+    },
+    {
+      "model": "kmeans_7",
+      "clusters": 7,
+      "silhouette": 0.20817267457411176,
+      "calinski_harabasz": 1592.1636832875022,
+      "davies_bouldin": 1.5628218459398122,
+      "stability_ari": 0.9760654553845534,
+      "coverage": 1.0,
+      "smallest_segment_share": 0.028830036875628563
+    },
+    {
+      "model": "gaussian_mixture_7",
+      "clusters": 7,
+      "silhouette": 0.18869295253858367,
+      "calinski_harabasz": 1507.3017823493087,
+      "davies_bouldin": 1.59206352801748,
+      "stability_ari": 0.8184507293133342,
+      "coverage": 1.0,
+      "smallest_segment_share": 0.028830036875628563
+    },
+    {
+      "model": "dbscan_eps_1.2",
+      "clusters": 2,
+      "silhouette": 0.4384970792774816,
+      "calinski_harabasz": 328.3209325006881,
+      "davies_bouldin": 0.5998824850676328,
+      "stability_ari": 1.0,
+      "coverage": 0.6870600067046597,
+      "smallest_segment_share": 0.010224606101240362
+    },
+    {
+      "model": "dbscan_eps_1.4",
+      "clusters": 2,
+      "silhouette": 0.40399447353512236,
+      "calinski_harabasz": 515.7428332151262,
+      "davies_bouldin": 0.6837188737140458,
+      "stability_ari": 1.0,
+      "coverage": 0.9136775058665773,
+      "smallest_segment_share": 0.018940663761314112
+    }
+  ],
+  "data_quality_before_cleaning": {
+    "duplicate_customer_snapshot": 8,
+    "negative_recency": 4,
+    "invalid_rates": 4,
+    "missing_feature_values": 60
+  }
+}
