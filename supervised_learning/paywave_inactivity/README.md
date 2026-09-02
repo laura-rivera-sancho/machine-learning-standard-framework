@@ -1,6 +1,4 @@
-# ML1 Transfer — PayWave Inactivity
-
-> **Status: Complete.** A migrated supervised-learning transfer case that tests whether the repository's decision framework generalizes from campaign response to inactivity-risk prioritization.
+# ML1 — PayWave Inactivity
 
 ## Decision
 
