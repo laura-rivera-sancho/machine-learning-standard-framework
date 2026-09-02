@@ -1,13 +1,21 @@
 from __future__ import annotations
 
 import copy
+import importlib.util
 import json
+import sys
 from pathlib import Path
-
-from production_readiness.src.validate_release_manifest import validate_manifest
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "production_readiness/contracts/example_release_manifest.json"
+MODULE_PATH = ROOT / "production_readiness/src/validate_release_manifest.py"
+
+spec = importlib.util.spec_from_file_location("release_manifest_validator", MODULE_PATH)
+validator = importlib.util.module_from_spec(spec)
+assert spec.loader is not None
+sys.modules[spec.name] = validator
+spec.loader.exec_module(validator)
+validate_manifest = validator.validate_manifest
 
 
 def load_example() -> dict:

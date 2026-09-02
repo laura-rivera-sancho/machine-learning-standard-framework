@@ -37,6 +37,6 @@ jobs:
       - name: Check Python formatting
         run: ruff format --check .
       - name: Verify Python syntax
-        run: python -m compileall -q supervised_learning unsupervised_learning tests
+        run: python -m compileall -q supervised_learning unsupervised_learning production_readiness tests
       - name: Run tests
         run: pytest --cov --cov-report=term-missing
