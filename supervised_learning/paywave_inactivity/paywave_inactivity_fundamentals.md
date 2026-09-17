@@ -89,7 +89,7 @@ A good target definition specifies:
 
 Example:
 
-> Predict whether an active PayWave customer will have **zero qualifying transactions during the next 30 days**, using only information available up to the scoring date.
+> Predict whether an active customer will have **zero qualifying transactions during the next 30 days**, using only information available up to the scoring date.
 
 Small changes in the target definition can create a very different modeling problem.
 

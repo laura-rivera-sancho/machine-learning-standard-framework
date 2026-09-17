@@ -10,7 +10,7 @@ It does **not** prove that groups are naturally real, that every customer belong
 
 ### Feature choice defines similarity
 
-Distance is calculated from the supplied representation. Including spend, recency, channel mix, or discount behavior expresses a business view of which differences matter. Highly skewed monetary and count features are log-transformed; all inputs are standardized so units do not dominate distance.
+Distance is calculated from the supplied representation. Including spend, recency, channel mix, or discount behavior expresses a business view of which differences matter. Highly skewed monetary and count features may need transformation; scaling prevents units from dominating distance. Document these choices and check how they affect the resulting groups.
 
 ### K-means
 
@@ -40,7 +40,7 @@ There is rarely a single statistically correct answer. Compare several values of
 
 ## Interpretation rules
 
-Cluster IDs are arbitrary; profile-based names must be versioned and reviewed. A centroid is an average, not a description of every member. Differences are descriptive associations, not causal drivers. Synthetic truth can validate this demonstration, but real projects have no ground-truth persona label.
+Cluster IDs are arbitrary; profile-based names should be versioned and reviewed. A centroid is an average, not a description of every member. Differences are descriptive associations, not causal drivers. In real use, there is usually no ground-truth persona label against which to score the partition.
 
 ## From segmentation to value
 

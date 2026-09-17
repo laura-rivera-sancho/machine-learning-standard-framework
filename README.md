@@ -6,7 +6,7 @@
 
 [![Repository quality](https://github.com/laura-rivera-sancho/machine-learning-standard-framework/actions/workflows/ci.yml/badge.svg)](https://github.com/laura-rivera-sancho/machine-learning-standard-framework/actions/workflows/ci.yml)
 
-**A decision-focused portfolio of supervised and unsupervised machine-learning systems built with reproducible evaluation, explainability, and operational controls.**
+**Supervised and unsupervised machine learning case studies with reproducible evaluation, explanations, and operational controls.**
 
 This repository demonstrates how I move from a business decision to a defensible model: defining supervised targets and unsupervised similarity contracts, preventing leakage, validating through time, comparing realistic candidates, evaluating operational decisions, explaining model behavior, and defining monitoring before deployment.
 

@@ -130,7 +130,7 @@ Rollback is not failure; lack of a rollback path is the operational failure.
 
 Human approval should be meaningful. Reviewers need the model's intended decision, evidence, uncertainty, affected population, prohibited uses, monitoring plan, and fallback. Approval records should identify who accepted which version and when.
 
-For these portfolio cases, the model ranks or organizes decisions; it does not independently contact customers, change eligibility, or create irreversible actions.
+For customer-facing use, document which actions the model may support and which require human approval. Keep consent, eligibility, and irreversible actions behind explicit controls.
 
 ## 12. Common failure modes
 
@@ -153,4 +153,3 @@ For these portfolio cases, the model ranks or organizes decisions; it does not i
 - Which signal causes observation, restriction, or rollback?
 - Who owns each response?
 - Can the system return to a safe baseline without losing decision history?
-

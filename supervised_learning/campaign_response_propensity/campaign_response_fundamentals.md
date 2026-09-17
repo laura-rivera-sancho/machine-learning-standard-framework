@@ -4,7 +4,7 @@ This reference explains the concepts needed to design, evaluate, interpret, and 
 
 ## What propensity means
 
-A response propensity is an estimated probability that an eligible customer will complete a defined outcome within a defined period. Here the unit is one customer at one campaign scoring date, and the target is a response within 14 days.
+A response propensity is an estimated probability that an eligible customer will complete a defined outcome within a defined period. The unit is typically one customer at one scoring date; the response definition and horizon must be set for each decision.
 
 The definition is incomplete unless it specifies:
 
@@ -25,12 +25,12 @@ A high-propensity customer may purchase without contact. A low-propensity custom
 
 Leakage occurs when training data contain information unavailable at the scoring moment or information produced by the outcome itself. It creates unrealistic validation performance.
 
-Examples of forbidden ML1 features are:
+Examples of features that would leak information are:
 
 - whether the current campaign was opened or clicked
 - the response order value
 - a response timestamp or fulfillment status
-- a generator-only latent probability
+- a synthetic-data generator's hidden probability, if it would not exist at scoring time
 
 Historical open and click rates are valid because they are calculated before the scoring date. Similar names do not imply similar availability; timing must be documented for each field.
 
@@ -38,19 +38,13 @@ Historical open and click rates are valid because they are calculated before the
 
 Randomly splitting repeated customer-campaign rows can place future observations from the same customer into training while earlier observations appear in testing. It also ignores seasonality, changing behavior, campaign fatigue, and policy drift.
 
-ML1 uses:
-
-- eight earlier monthly cohorts for training
-- two later cohorts for model selection and tuning
-- the final two cohorts for one-time testing
-
-The Test set remains untouched until the model family is selected.
+Use earlier cohorts for training, later cohorts for model selection, and the latest representative cohort for a one-time test. Keep the test set untouched until the model family is selected. For a worked split, see the [case methodology](methodology.md).
 
 ## Baselines and candidates
 
 A credible modeling case begins with the actual current decision rule, not with a weak dummy classifier.
 
-ML1 compares:
+Useful comparisons include:
 
 - **Targeting rule:** transparent ranking based on recency, historical engagement, prior response, and sessions
 - **Logistic Regression:** interpretable additive probability baseline
@@ -87,7 +81,7 @@ Lift compares selected precision with the population response rate:
 
 `precision at capacity / population response rate`
 
-A lift of 2.28 means the selected group responds at 2.28 times the overall rate.
+A lift of 2 means the selected group responds at twice the overall rate. This is a ranking comparison, not an estimate of the campaign's causal effect.
 
 ### Brier score and log loss
 
@@ -97,7 +91,7 @@ Ranking metrics do not prove that probabilities are reliable. Brier score measur
 
 A calibrated score of 0.20 should correspond to roughly a 20% response rate across comparable observations. Calibration matters for forecasting volume, computing expected value, setting probability thresholds, and communicating uncertainty.
 
-Review calibration overall, through time, and by operational segment. A model can rank well while systematically overpredicting. ML1’s upper score bands overpredict modestly, so the pilot must monitor and recalibrate before probability-based automation.
+Review calibration overall, through time, and by operational segment. A model can rank well while systematically overpredicting. Check calibration before using scores for probability-based forecasts or automated decisions.
 
 ## Threshold and capacity design
 
@@ -114,13 +108,13 @@ Eligibility and suppression rules should remain deterministic controls outside t
 
 Permutation importance measures how much evaluation performance falls when a feature is disrupted. It helps identify influential inputs but does not show causality or the direction of effect. Correlated features can share or mask importance.
 
-ML1’s strongest inputs include historical click rate, discount share, prior responses, campaign spacing, loyalty tier, and recency. These are predictive signals, not proof that changing them will cause response.
+Inputs such as historical engagement, campaign spacing, and recency may help prediction. Their importance does not prove that changing them will cause a response.
 
 ## Segment evaluation and responsible use
 
 Performance should be checked across relevant operational groups such as region, channel, and loyalty tier. Differences can arise from sample size, base rates, data quality, customer experience, or policy history.
 
-Protected or sensitive attributes are excluded from ML1 features. Excluding them does not guarantee fairness because other variables can act as proxies. Production review should examine selection rates, errors, customer impact, and complaint or opt-out outcomes.
+Excluding protected or sensitive attributes does not guarantee fairness because other variables can act as proxies. Review selection rates, errors, customer impact, and complaint or opt-out outcomes across relevant groups where lawful and appropriate.
 
 ## Drift and monitoring
 
