@@ -8,7 +8,7 @@ Adopt one release contract across the repository's three ML cases. Permit operat
 
 ## Why this matters
 
-The completed cases demonstrate modeling decisions, but operating risk appears after handoff: feature definitions can change, labels arrive late, populations drift, consumers can misuse outputs, and teams may be unable to identify or reverse the active version.
+The published case evidence demonstrates modeling decisions, but operating risk appears after handoff: feature definitions can change, labels arrive late, populations drift, consumers can misuse outputs, and teams may be unable to identify or reverse the active version.
 
 ## Operating model
 

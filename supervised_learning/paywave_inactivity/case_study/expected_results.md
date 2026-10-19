@@ -1,6 +1,6 @@
 # PayWave Expected Reference Results
 
-These reference values are produced by `src/generate_synthetic_data.py` with `SEED = 126` and evaluated by `src/train_evaluate_models.py`. They provide a reproducibility check for the guided analysis and should not be treated as real customer or company results.
+These reference values are produced by `src/generate_synthetic_data.py` with `SEED = 126` and evaluated by `src/train_evaluate_models.py`. They provide a reproducibility check for the reference analysis and should not be treated as real customer or company results.
 
 ## Data-quality findings
 

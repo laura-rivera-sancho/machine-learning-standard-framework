@@ -67,7 +67,7 @@ Exact thresholds should be agreed after the data-readiness review. At minimum:
 | [Model card](model_card/model_card.md) | Intended use, exclusions, risks, and operating controls |
 | [Monitoring plan](case_study/monitoring_plan.md) | Data, drift, calibration, performance, and rollback thresholds |
 | [Reference implementation](src) | Deterministic generation, training, evaluation, and visual output |
-| [Method notes](campaign_response_fundamentals.md) | Supervised-learning concepts and interpretation boundaries |
+| [Method notes](method_notes.md) | Supervised-learning concepts and interpretation boundaries |
 | [Delivery methodology](methodology.md) | Source-to-decision modeling lifecycle |
 
 ## Technical reproduction

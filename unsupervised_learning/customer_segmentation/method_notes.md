@@ -1,4 +1,4 @@
-# Customer Segmentation Fundamentals
+# Customer Segmentation Method Notes
 
 ## What segmentation answers
 

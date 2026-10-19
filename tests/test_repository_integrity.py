@@ -31,7 +31,7 @@ def test_required_portfolio_files_exist():
         "LICENSE",
         "CONTRIBUTING.md",
         "supervised_learning/campaign_response_propensity/README.md",
-        "supervised_learning/campaign_response_propensity/campaign_response_fundamentals.md",
+        "supervised_learning/campaign_response_propensity/method_notes.md",
         "supervised_learning/campaign_response_propensity/methodology.md",
         "supervised_learning/campaign_response_propensity/case_study/business_case.md",
         "supervised_learning/campaign_response_propensity/case_study/data_dictionary.md",
@@ -39,7 +39,7 @@ def test_required_portfolio_files_exist():
         "supervised_learning/campaign_response_propensity/model_card/model_card.md",
         "supervised_learning/campaign_response_propensity/reports/stakeholder_readout.pptx",
         "supervised_learning/paywave_inactivity/README.md",
-        "supervised_learning/paywave_inactivity/paywave_inactivity_fundamentals.md",
+        "supervised_learning/paywave_inactivity/method_notes.md",
         "supervised_learning/paywave_inactivity/methodology.md",
         "supervised_learning/paywave_inactivity/case_study/business_case.md",
         "supervised_learning/paywave_inactivity/case_study/data_dictionary.md",
@@ -48,7 +48,7 @@ def test_required_portfolio_files_exist():
         "supervised_learning/paywave_inactivity/model_card/model_card.md",
         "supervised_learning/paywave_inactivity/reports/stakeholder_readout.pptx",
         "unsupervised_learning/customer_segmentation/README.md",
-        "unsupervised_learning/customer_segmentation/customer_segmentation_fundamentals.md",
+        "unsupervised_learning/customer_segmentation/method_notes.md",
         "unsupervised_learning/customer_segmentation/methodology.md",
         "unsupervised_learning/customer_segmentation/case_study/business_case.md",
         "unsupervised_learning/customer_segmentation/case_study/data_dictionary.md",
@@ -58,7 +58,7 @@ def test_required_portfolio_files_exist():
         "unsupervised_learning/customer_segmentation/model_card/model_card.md",
         "unsupervised_learning/customer_segmentation/reports/stakeholder_readout.pptx",
         "production_readiness/README.md",
-        "production_readiness/production_readiness_fundamentals.md",
+        "production_readiness/method_notes.md",
         "production_readiness/operating_model.md",
         "production_readiness/contracts/model_release_contract.md",
         "production_readiness/contracts/example_release_manifest.json",
@@ -74,7 +74,7 @@ def test_required_portfolio_files_exist():
     assert not missing, f"Missing portfolio files: {missing}"
 
 
-def test_completed_ml_modules_publish_valid_powerpoint_readouts():
+def test_published_ml_modules_include_valid_powerpoint_readouts():
     decks = [
         ROOT / "supervised_learning/campaign_response_propensity/reports/stakeholder_readout.pptx",
         ROOT / "supervised_learning/paywave_inactivity/reports/stakeholder_readout.pptx",

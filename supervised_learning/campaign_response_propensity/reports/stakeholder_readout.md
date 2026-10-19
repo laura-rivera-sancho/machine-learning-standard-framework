@@ -1,5 +1,7 @@
 # ML1 Stakeholder Readout — Campaign Response Propensity
 
+> **Demonstration boundary:** Harbor & Pine, its customers, business assumptions, and every result below are fictional and synthetically generated. The figures demonstrate the decision workflow, not observed campaign performance.
+
 [Download the five-slide executive PowerPoint](stakeholder_readout.pptx) for a non-technical presentation of the decision, evidence, limitations, and pilot plan.
 
 ## Decision

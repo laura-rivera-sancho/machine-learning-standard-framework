@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this framework, please cite it as follows."
-title: "Machine Learning Standard Framework"
+title: "Machine Learning Decision Systems"
 type: software
 authors:
   - family-names: "Rivera Sancho"

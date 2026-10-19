@@ -1,12 +1,12 @@
-# ML3 — Production Readiness
+# Model Release & Operating Readiness
 
-> **Status: Complete.** A shared operating framework for releasing, monitoring, retraining, and rolling back the repository's supervised and unsupervised ML systems.
+> **Evidence status: Working reference implementation.** Shared release, monitoring, retraining, and rollback controls for supervised and unsupervised ML systems.
 
 **Decision:** What evidence and controls must be present before a model is released, and what should happen when its data, behavior, or business context changes?
 
-ML3 connects the three completed case studies to one lifecycle. It separates model development from release approval, records the exact model and data contract, translates monitoring signals into owned actions, and requires a reversible path back to a safe baseline.
+This operating layer connects the three published case studies to one lifecycle. It separates model development from release approval, records the exact model and data contract, translates monitoring signals into owned actions, and requires a reversible path back to a safe baseline.
 
-## What this module demonstrates
+## What this evidence demonstrates
 
 - A versioned release contract covering provenance, evaluation, approval, serving, monitoring, and rollback
 - A model-registry approach that preserves lineage between code, data, evaluation evidence, and deployment state
@@ -15,11 +15,11 @@ ML3 connects the three completed case studies to one lifecycle. It separates mod
 - Practical runbooks for incidents and controlled operating rehearsals
 - An executable validator and tests for the example release manifest
 
-## Portfolio review path
+## Buyer review path
 
 1. [Executive PowerPoint](reports/stakeholder_readout.pptx)
 2. [Stakeholder readout](reports/stakeholder_readout.md)
-3. [Production-readiness fundamentals](production_readiness_fundamentals.md)
+3. [Method notes](method_notes.md)
 4. [Operating model](operating_model.md)
 5. [Release contract](contracts/model_release_contract.md)
 6. [Example release manifest](contracts/example_release_manifest.json)
@@ -40,4 +40,8 @@ pytest
 ```
 
 The example describes a fictional campaign-response release. It is an inspectable governance artifact, not evidence that a live model has been deployed.
+
+## Start a scope discussion
+
+[Email Laura](mailto:laura.riverasancho33@gmail.com) with the model decision, current release process, control gaps, approval owners, and target timeline.
 

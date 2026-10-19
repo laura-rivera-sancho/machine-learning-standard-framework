@@ -1,5 +1,7 @@
 # Stakeholder Readout — ML2 Customer Segmentation
 
+> **Demonstration boundary:** Northstar Market, its customers, and every result below are fictional and synthetically generated. The figures demonstrate segmentation evaluation, not observed customer behavior or intervention impact.
+
 [Download the five-slide executive PowerPoint](stakeholder_readout.pptx) for a non-technical presentation of the recommendation, model choice, personas, limitations, and activation plan.
 
 ## Recommendation

@@ -1,4 +1,4 @@
-# Production Readiness Fundamentals
+# Production Readiness Method Notes
 
 Production readiness asks whether a model can be operated safely and usefully after experimentation ends. A strong offline score is necessary evidence, but it is not a release decision by itself.
 

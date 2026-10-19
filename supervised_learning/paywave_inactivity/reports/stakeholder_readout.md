@@ -1,7 +1,6 @@
 # PayWave Inactivity Prediction — Stakeholder Readout
 
-> **Portfolio case study:** PayWave, its customers, and every result below are
-> fictional and synthetically generated.
+> **Demonstration boundary:** PayWave, its customers, and every result below are fictional and synthetically generated. The figures demonstrate the decision workflow, not observed retention performance.
 
 ![PayWave executive summary showing 552 incremental at-risk customer captures, 2.58-times lift at capacity, and 46,451 dollars in illustrative net value](executive_summary.png)
 

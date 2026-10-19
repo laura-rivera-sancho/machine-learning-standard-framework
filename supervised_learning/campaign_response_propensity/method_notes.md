@@ -1,4 +1,4 @@
-# Campaign Response Propensity Fundamentals
+# Campaign Response Propensity Method Notes
 
 This reference explains the concepts needed to design, evaluate, interpret, and operate a campaign-response propensity model.
 

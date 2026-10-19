@@ -1,4 +1,4 @@
-# Predictive Analytics Fundamentals
+# Inactivity Risk Method Notes
 
 ## What is predictive analytics?
 

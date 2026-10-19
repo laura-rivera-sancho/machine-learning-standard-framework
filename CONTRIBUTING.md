@@ -4,7 +4,7 @@ Contributions should improve analytical correctness, reproducibility, responsibl
 
 ## Case-study standard
 
-Every completed case should include:
+Every published case should include:
 
 1. a business decision, scoring population, target, horizon, and success criteria
 2. a data contract with feature availability and leakage controls
@@ -16,7 +16,7 @@ Every completed case should include:
 8. a model card, monitoring plan, and rollback conditions
 9. a stakeholder readout with limitations and recommended action
 
-Do not add challenge notebooks. Add a guided notebook only when it materially improves review beyond the tested source workflow.
+Keep optional exercises outside the primary buyer path. Add a reproducible notebook only when it materially improves review beyond the tested source workflow.
 
 ## Local checks
 
